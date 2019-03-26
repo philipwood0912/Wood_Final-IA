@@ -1,1 +1,43 @@
+@charset "UTF-8";
 
+/*Fonts*/
+
+@font-face {
+    font-family: 'chunkfive';
+    src: url('../fonts/chunkfive-webfont.woff'),
+         url('../fonts/chunkfive-webfont.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'rubik-bold';
+    src: url('../fonts/rubik-bold-webfont.woff'),
+         url('../fonts/rubik-bold-webfont.woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'rubik-bolditalic';
+    src: url('../fonts/rubik-bolditalic-webfont.woff'),
+         url('../fonts/rubik-bolditalic-webfont.woff2');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'rubik-regular';
+    src: url('../fonts/rubik-regular-webfont.woff'),
+         url('../fonts/rubik-regular-webfont.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'rubik-italic';
+    src: url('../fonts/rubik-italic-webfont.woff'),
+         url('../fonts/rubik-italic-webfont.woff2');
+    font-weight: normal;
+    font-style: italic;
+}
