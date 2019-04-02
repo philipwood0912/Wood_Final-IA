@@ -10,11 +10,11 @@
       }
 
       .cls-3 {
-        fill: #004200;
+        fill: #007f00;
       }
     </style>
-    <clipPath id="clip-path" transform="translate(-2.25 -3.22)">
-      <rect class="cls-1" y="2.09" width="15.33" height="7.44"/>
+    <clipPath id="clip-path">
+      <rect class="cls-1" x="-2.25" y="-1.13" width="15.33" height="7.44"/>
     </clipPath>
   </defs>
   <title>backTop</title>
