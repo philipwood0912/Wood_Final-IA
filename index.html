@@ -7,13 +7,13 @@
 	<link href="css/reset.css" rel="stylesheet" type="text/css">
 	<link href="css/main.css" rel="stylesheet" type="text/css">
 	</head>
-	<body>
+	<body id="home">
         <h1 class="hidden">Home Page</h1>
         <div id="container">
             <header id="mainHeader">
                 <h2 class="hidden">Top Navigation</h2>
                 <div id="logo">
-                    <h3>Logo</h3>
+                    <img src="images/logo2.svg" alt="logo">
                 </div>
                 <div id="social">
                     <div class="soc">
@@ -32,15 +32,15 @@
                         <img src="images/burger.svg" alt="menu">
                     </div>
                 </div>
-                <nav id="desktopNav">
+                <nav id="desktopNav" class="navi">
                     <h3 class="hidden">Desktop Navigation</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="archives.html">Archives</a></li>
-                        <li><a href="links.html">Links</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="projects.html">PROJECTS</a></li>
+                        <li><a href="archives.html">ARCHIVES</a></li>
+                        <li><a href="links.html">LINKS</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
                     </ul>
                 </nav>
                 <nav id="mobileNav">
@@ -72,39 +72,55 @@
                 <p>"For the enhancement, protection and promotion of a viable,
 multi-species fishery within the Thames River watershed."</p>
             </section>
-            <div class="homeBut signBut">
-                <a href="contact.html"><h3>Newsletter Sign-Up</h3></a>
-            </div>
-            <div class="homeBut fundBut">
-                <a href="contact.html"><h3>Help Support Our Projects!</h3></a>
-            </div>
-            <div class="homeBut gearBut">
-                <a href="about.html"><h3>Check Out Our Gear</h3></a>
-            </div>
+            <section id="homeButCon">
+                <h2 class="hidden">Home Page Links</h2>
+                <div class="homeBut signBut">
+                    <a href="contact.html"><h3>Newsletter Sign-Up</h3></a>
+                </div>
+                <div class="homeBut fundBut">
+                    <a href="contact.html"><h3>Help Support Our Projects!</h3></a>
+                </div>
+                <div class="homeBut gearBut">
+                    <a href="about.html"><h3>Check Out Our Gear</h3></a>
+                </div>
+            </section>
             <section id="recent">
                 <h2>Recent Activities</h2>
                 <div class="line"></div>
-                <div class="activities meeting">
-                    <div class="titleAct">
-                        <a href="about.html"><h3>TRAA General Meetings</h3></a>
+                <div id="recentCon">
+                    <div class="activities meeting">
+                        <div class="titleAct">
+                            <a href="about.html"><h3>TRAA General Meetings</h3></a>
+                        </div>
+                        <img src="images/index_image3.jpg" alt="map">
                     </div>
-                    <img src="images/index_image3.jpg" alt="map">
-                </div>
-                <div class="activities trout">
-                    <div class="titleAct">
-                        <a href="#"><h3>TRAA Trout Hatchery</h3></a>
+                    <div class="activities trout">
+                        <div class="titleAct">
+                            <a href="#"><h3>TRAA Trout Hatchery</h3></a>
+                        </div>
+                        <img src="images/index_image4.jpg" alt="fish babies">
                     </div>
-                    <img src="images/index_image4.jpg" alt="fish babies">
-                </div>
-                <div class="activities rod">
-                    <div class="titleAct">
-                        <a href="#"><h3>Rod Building Your First Time</h3></a>
+                    <div class="activities rod">
+                        <div class="titleAct">
+                            <a href="#"><h3>Rod Building Your First Time</h3></a>
+                        </div>
+                        <img src="images/index_image5.jpg" alt="fishing rod">
                     </div>
-                    <img src="images/index_image5.jpg" alt="fishing rod">
                 </div>
             </section>
             <footer id="mainFoot">
                 <h2 class="hidden">Bottom Navigation</h2>
+                <nav id="desktopNavFoot" class="navi">
+                    <h3 class="hidden">Desktop Bottom Menu</h3>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="projects.html">PROJECTS</a></li>
+                        <li><a href="archives.html">ARCHIVES</a></li>
+                        <li><a href="links.html">LINKS</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
                 <div id="socialFoot">
                     <div class="soc">
                         <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.svg" alt="facebook"></a>
@@ -122,17 +138,6 @@ multi-species fishery within the Thames River watershed."</p>
                         <img src="images/backTop.svg" alt="back to top">
                     </div>
                 </div>
-                <nav id="desktopNavFoot">
-                    <h3 class="hidden">Desktop Bottom Menu</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="archives.html">Archives</a></li>
-                        <li><a href="links.html">Links</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
             </footer>
         </div>
         <script src="js/main.js"></script>
