@@ -1,8 +1,8 @@
 (function() {
 	console.log("Javascript is linked up");
-
-	var button = document.querySelector("#menuBut");
-	var burgerCon = document.querySelector("#burgerCon");
+    
+	var button = document.querySelector("#menuBut"),
+        burgerCon = document.querySelector("#burgerCon");
 
 	function hamburgerMenu() {
 		console.log("button clicked");
