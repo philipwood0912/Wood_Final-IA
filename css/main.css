@@ -80,7 +80,7 @@ h2, h3, h4 {
     color: #fff;
 }
 
-#logo, #desktopNav, #desktopNavFoot, #stats, .heroBut, #histImg, .conInfo, .relatedInfo, #fundPhoto {
+#logo, #desktopNav, #desktopNavFoot, #stats, .heroBut, #histImg, .conInfo, .relatedInfo, #fundPhoto, .contactTwo {
     display: none;
 }
 
