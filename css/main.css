@@ -664,6 +664,10 @@ h2, h3, h4 {
     text-align: center;
 }
 
+#businessCon a {
+    display: contents;
+}
+
 .pos {
     background-color: #fff;
     border: 3px solid #007f00;
