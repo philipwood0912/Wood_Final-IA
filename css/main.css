@@ -80,8 +80,31 @@ h2, h3, h4 {
     color: #fff;
 }
 
-#logo, #desktopNav, #desktopNavFoot, #stats, .heroBut, #histImg, .conInfo, .relatedInfo, #fundPhoto, .contactTwo {
+#logo, #desktopNav, #desktopNavFoot, #stats, .heroBut, #histImg, .conInfo, .relatedInfo, #fundPhoto, .contactTwo, #thirdAbout {
     display: none;
+}
+
+/*Button transform*/
+.back:active, .next:active, .homeBut:active, li a:active, .aboutBut:active, .newsBut:active {
+    -webkit-transform: translate(0px, 3px);
+    -moz-transform: translate(0px, 3px);
+    transform: translate(0px, 3px);
+}
+
+/*Image transform*/
+
+#histImg img:hover {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+@media screen and (min-width: 641px) {
+    .gearImg:hover {
+        -webkit-transform: scale(1.15);
+        -moz-transform: scale(1.15);
+        transform: scale(1.15);
+    }
 }
 
 /*Header*/
@@ -617,6 +640,14 @@ h2, h3, h4 {
     margin: 0 auto;
 }
 
+#gearCon {
+    background-color: #fff;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding-top: 20px;
+}
+
 #gear {
     background-color: #004200;
     padding: 15px;
@@ -633,9 +664,8 @@ h2, h3, h4 {
 }
 
 .gearImg {
-    max-width: 250px;
     margin: 0 auto;
-    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #stats {
@@ -662,6 +692,8 @@ h2, h3, h4 {
 #businessCon {
     margin: 0 auto;
     text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
 }
 
 #businessCon a {
@@ -749,9 +781,19 @@ h2, h3, h4 {
         display: flex;
         justify-content: space-around;
     }
+    #histImg img {
+        border-radius: 10px;
+    }
     #gearCon {
         display: flex;
-        padding: 15px 0px;
+        justify-content: center;
+        margin: 0;
+        padding: 20px 0px;
+        max-width: 960px;
+        max-height: 500px;
+    }
+    .gearImg {
+        padding-bottom: 0;
     }
     #stats {
         display: block;
@@ -806,6 +848,13 @@ h2, h3, h4 {
     }
     #meetings p, #history p {
         padding: 10px 60px 0px 60px;
+    }
+    #thirdAbout {
+        display: block;
+    }
+    #histImg {
+        padding: 15px 20px;
+        padding-bottom: 0;
     }
 }
 
@@ -965,6 +1014,7 @@ h2, h3, h4 {
 #events {
     background-color: #004200;
     padding: 15px;
+    padding-bottom: 20px;
     max-width: 960px;
     margin: 0 auto;
     margin-top: 10px;
@@ -1064,15 +1114,17 @@ h2, h3, h4 {
         order: -1;
         grid-column: 1/8;
         grid-row: 1/2;
-        padding-top: 10px;
+        padding-top: 15px;
     }
     .eventImg {
         grid-column: 8/-1;
         grid-row: 1/-1;
+        padding-top: 5px;
     }
     #eventTextTwo {
         grid-column: 1/8;
         grid-row: 3/4;
+        padding-top: 15px;
     }
 }
 
@@ -1532,6 +1584,8 @@ h2, h3, h4 {
 
 #checkbox {
     grid-column: 5/6;
+    width: 35px;
+    height: 35px;
 }
 
 #mailText {
@@ -1652,8 +1706,9 @@ h2, h3, h4 {
         display: block;
         grid-column: 8/-1;
     }
-    #fundPhoto object {
-        width: 180px;
+    #fundPhoto img {
+        margin-top: 20px;
+        border-radius: 10px;
     }
     #contact p {
         padding: 0px 50px;
