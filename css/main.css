@@ -80,7 +80,7 @@ h2, h3, h4 {
     color: #fff;
 }
 
-#logo, #desktopNav, #desktopNavFoot, #stats, .heroBut, #histImg, .conInfo, .relatedInfo, #fundPhoto, .contactTwo, #thirdAbout {
+#logo, #desktopNav, #desktopNavFoot, #stats, .heroBut, #histImg, .conInfo, .relatedInfo, #fundPhoto, .contactTwo, #thirdAbout, #imgTwo {
     display: none;
 }
 
@@ -383,34 +383,50 @@ h2, h3, h4 {
         padding: 0px 10px;
     }
     #hero {
-        background-image: url(../images/hero2.jpg);
+        position: relative;
+        padding: 10px 10px 0px 10px;
+        background: none;
         max-width: 940px;
-        height: 360px;
+        height: 400px;
         display: grid;
         grid-template-columns: repeat(8, minmax(50px, 1fr));
         grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+        grid-gap: 10px;
         align-items: center;
         justify-items: center;
     }
+    #imgTwo {
+        display: block;
+        position: absolute;
+        max-width: 960px;
+        grid-column: 1/-1;
+        grid-row: 1/-1;
+        padding: 10px 0px;
+    }
     #hero h2 {
+        position: absolute;
         grid-column: 2/8;
         grid-row: 1/3;
         font-size: 35px;
         line-height: 35px;
     }
     #hero h3 {
+        position: absolute;
         grid-column: 2/8;
+        grid-row: 3/4;
         font-size: 25px;
     }
     #hero p {
+        position: absolute;
         margin: 0;
         grid-column: 2/8;
-        grid-row: 6/-1;
+        grid-row: 5/-1;
         font-size: 20px;
         line-height: 25px;
         margin-top: 30px;
     }
     .heroBut {
+        position: absolute;
         display: flex;
         justify-content: center;
     }
