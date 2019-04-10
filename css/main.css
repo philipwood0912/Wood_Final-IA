@@ -80,8 +80,31 @@ h2, h3, h4 {
     color: #fff;
 }
 
-#logo, #desktopNav, #desktopNavFoot, #stats, .heroBut, #histImg, .conInfo, .relatedInfo, #fundPhoto {
+#logo, #desktopNav, #desktopNavFoot, #stats, .heroBut, #histImg, .conInfo, .relatedInfo, #fundPhoto, .contactTwo, #thirdAbout {
     display: none;
+}
+
+/*Button transform*/
+.back:active, .next:active, .homeBut:active, li a:active, .aboutBut:active, .newsBut:active {
+    -webkit-transform: translate(0px, 3px);
+    -moz-transform: translate(0px, 3px);
+    transform: translate(0px, 3px);
+}
+
+/*Image transform*/
+
+#histImg img:hover {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+@media screen and (min-width: 641px) {
+    .gearImg:hover {
+        -webkit-transform: scale(1.15);
+        -moz-transform: scale(1.15);
+        transform: scale(1.15);
+    }
 }
 
 /*Header*/
@@ -162,10 +185,13 @@ h2, h3, h4 {
     #desktopNav ul li a {
         font-size: 14px;
         color: #007f00;
-        padding: 10px;
+        padding: 10px 0px;
         background-color: #fff;
-        border: 3px solid #007f00;
         border-radius: 10px; 
+    }
+    #desktopNav ul li a:hover{
+        background-color: #007f00;
+        color: #fff;
     }
 }
 
@@ -245,19 +271,36 @@ h2, h3, h4 {
 }
 
 .back, .next {
-    width: 50px;
-    height: 50px;
-    background-color: #fff;
+    width: 44px;
+    height: 44px;
+    padding: 3px;
     border: 3px solid #007f00;
     border-radius: 10px; 
 }
 
-.back img, .next img {
-    width: 50%;
+.back {
+    background: url(../images/back.svg) no-repeat 6px;
+    background-origin: content-box;
+    background-color: #fff;
+}
+
+.next {
+    background: url(../images/next.svg) no-repeat 12px;
+    background-origin: content-box;
+    background-color: #fff;
+}
+
+.back:hover {
+    background: url(../images/back2.svg) no-repeat 10px;
+    background-color: #007f00;
+}
+
+.next:hover {
+    background: url(../images/next2.svg) no-repeat -10px;
+    background-color: #007f00;
 }
 
 .homeBut {
-    max-width: 500px;
     height: 50px;
     background-color: #fff;
     border: 3px solid #007f00;
@@ -270,6 +313,12 @@ h2, h3, h4 {
 .homeBut h3 {
     color: #007f00;
     line-height: 50px;
+    padding: 0px 5px;
+}
+
+.homeBut h3:hover {
+    background-color: #007f00;
+    color: #fff;
 }
 
 #recent {
@@ -312,6 +361,11 @@ h2, h3, h4 {
     font-size: 17px
 }
 
+.titleAct h3:hover {
+    background-color: #007f00;
+    color: #fff;
+}
+
 /*Index Responsive*/
 
 @media screen and (min-width: 641px) {
@@ -325,8 +379,8 @@ h2, h3, h4 {
         display: flex;
         margin-top: 5px;
     }
-    .homeBut {
-        padding: 0px 15px;
+    .homeBut h3 {
+        padding: 0px 10px;
     }
     #hero {
         background-image: url(../images/hero2.jpg);
@@ -378,7 +432,7 @@ h2, h3, h4 {
     }
     .titleAct h3 {
         line-height: 20px;
-        padding: 5px 30px;
+        padding: 5px 25px;
     }
 }
 
@@ -461,7 +515,7 @@ h2, h3, h4 {
         grid-column: 9/-1;
     }
     #desktopNavFoot ul {
-        margin-top: 6px;
+        margin-top: 9px;
         display: grid;
         grid-template-columns: repeat(6, minmax(10px, 1fr));
         grid-gap: 10px;
@@ -475,8 +529,11 @@ h2, h3, h4 {
         color: #007f00;
         padding: 10px 0px;
         background-color: #fff;
-        border: 3px solid #007f00;
         border-radius: 10px; 
+    }
+    #desktopNavFoot ul li a:hover{
+        background-color: #007f00;
+        color: #fff;
     }
 }
 
@@ -532,6 +589,11 @@ h2, h3, h4 {
     line-height: 50px;
 }
 
+.aboutBut h3:hover {
+    background-color: #007f00;
+    color: #fff;
+}
+
 .prot, .bree, .form {
     grid-column: 1/7;
 }
@@ -578,6 +640,14 @@ h2, h3, h4 {
     margin: 0 auto;
 }
 
+#gearCon {
+    background-color: #fff;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding-top: 20px;
+}
+
 #gear {
     background-color: #004200;
     padding: 15px;
@@ -594,14 +664,13 @@ h2, h3, h4 {
 }
 
 .gearImg {
-    max-width: 250px;
     margin: 0 auto;
-    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #stats {
     background-color: #004200;
-    padding: 10px;
+    padding: 15px;
     max-width: 960px;
     margin: 0 auto;
     margin-top: 10px;
@@ -623,6 +692,12 @@ h2, h3, h4 {
 #businessCon {
     margin: 0 auto;
     text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+#businessCon a {
+    display: contents;
 }
 
 .pos {
@@ -706,9 +781,19 @@ h2, h3, h4 {
         display: flex;
         justify-content: space-around;
     }
+    #histImg img {
+        border-radius: 10px;
+    }
     #gearCon {
         display: flex;
-        padding: 15px 0px;
+        justify-content: center;
+        margin: 0;
+        padding: 20px 0px;
+        max-width: 960px;
+        max-height: 500px;
+    }
+    .gearImg {
+        padding-bottom: 0;
     }
     #stats {
         display: block;
@@ -764,6 +849,13 @@ h2, h3, h4 {
     #meetings p, #history p {
         padding: 10px 60px 0px 60px;
     }
+    #thirdAbout {
+        display: block;
+    }
+    #histImg {
+        padding: 15px 20px;
+        padding-bottom: 0;
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -817,6 +909,11 @@ h2, h3, h4 {
     padding: 20px 0px;
 }
 
+.currentTitle h3:hover {
+    background-color: #007f00;
+    color: #fff;
+}
+
 #currentCon {
     text-align: center;
 }
@@ -840,6 +937,11 @@ h2, h3, h4 {
 .pastTitle h3 {
     color: #007f00;
     padding: 20px 0px;
+}
+
+.pastTitle h3:hover {
+    background-color: #007f00;
+    color: #fff;
 }
 
 /*Projects Page Responsive*/
@@ -904,9 +1006,15 @@ h2, h3, h4 {
     padding: 10px 0px;
 }
 
+.newsBut h3:hover {
+    background-color: #007f00;
+    color: #fff;
+}
+
 #events {
     background-color: #004200;
     padding: 15px;
+    padding-bottom: 20px;
     max-width: 960px;
     margin: 0 auto;
     margin-top: 10px;
@@ -927,7 +1035,7 @@ h2, h3, h4 {
 .eventTitle {
     background-color: #fff;
     border: 3px solid #007f00;
-    flex: 0 1 600px;
+    flex: 0 1 175px;
 }
 
 .eventBut {
@@ -968,6 +1076,9 @@ h2, h3, h4 {
     .eventTitle h3 {
         font-size: 14px;
     }
+    .eventTitle {
+        flex: 1 1 240px;
+    }
 }
 
 @media screen and (min-width: 426px) {
@@ -1003,15 +1114,17 @@ h2, h3, h4 {
         order: -1;
         grid-column: 1/8;
         grid-row: 1/2;
-        padding-top: 10px;
+        padding-top: 15px;
     }
     .eventImg {
         grid-column: 8/-1;
         grid-row: 1/-1;
+        padding-top: 5px;
     }
     #eventTextTwo {
         grid-column: 1/8;
         grid-row: 3/4;
+        padding-top: 15px;
     }
 }
 
@@ -1032,6 +1145,9 @@ h2, h3, h4 {
     }
     #news p {
         padding: 5px 20px;
+    }
+    .eventTitle {
+        flex: 0 1 575px;
     }
 }
 
@@ -1087,6 +1203,11 @@ h2, h3, h4 {
     padding: 10px 0px;
 }
 
+.conLink h3:hover {
+    background-color: #007f00;
+    color: #fff;
+}
+
 #author {
     background-color: #004200;
     padding: 15px;
@@ -1111,6 +1232,11 @@ h2, h3, h4 {
     color: #007f00;
     font-size: 10px;
     padding: 10px 0px;
+}
+
+.authOne h3:hover {
+    background-color: #007f00;
+    color: #fff;
 }
 
 .authLast {
@@ -1138,6 +1264,11 @@ h2, h3, h4 {
     padding: 10px 0px;
 }
 
+.gov h3:hover {
+    background-color: #007f00;
+    color: #fff;
+}
+
 #support {
     background-color: #004200;
     padding: 15px;
@@ -1163,6 +1294,11 @@ h2, h3, h4 {
     color: #fff;
 }
 
+.supportLink h3:hover {
+    background-color: #007f00;
+    color: #fff;
+}
+
 #related {
     background-color: #004200;
     padding: 15px;
@@ -1181,6 +1317,11 @@ h2, h3, h4 {
 .relatedLink h3 {
     color: #007f00;
     padding: 10px;
+}
+
+.relatedLink h3:hover {
+    background-color: #007f00;
+    color: #fff;
 }
 
 #please {
@@ -1443,6 +1584,8 @@ h2, h3, h4 {
 
 #checkbox {
     grid-column: 5/6;
+    width: 35px;
+    height: 35px;
 }
 
 #mailText {
@@ -1563,8 +1706,9 @@ h2, h3, h4 {
         display: block;
         grid-column: 8/-1;
     }
-    #fundPhoto object {
-        width: 180px;
+    #fundPhoto img {
+        margin-top: 20px;
+        border-radius: 10px;
     }
     #contact p {
         padding: 0px 50px;
