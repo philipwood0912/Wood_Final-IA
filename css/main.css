@@ -122,10 +122,17 @@ h2, h3, h4 {
     border-radius: 10px;
     padding: 10px;
     border: 3px solid #007f00;
+    transition: all 500ms ease;
 }
 
 #menuBut img {
     margin-bottom: 10px;
+}
+
+#menuBut.expanded {
+    -webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
 }
 
 #social {
@@ -342,6 +349,7 @@ h2, h3, h4 {
     margin: 0 auto;
     text-align: center;
     overflow: hidden;
+    margin-top: 10px;
 }
 
 .activities img {
@@ -450,6 +458,10 @@ h2, h3, h4 {
     .titleAct h3 {
         line-height: 20px;
         padding: 5px 25px;
+    }
+    .activities {
+        margin: 0;
+        margin-top: 5px;
     }
 }
 
@@ -1131,6 +1143,7 @@ h2, h3, h4 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
     grid-gap: 10px;
+    position: relative;
 }
 
 .newsBut {
