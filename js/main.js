@@ -17,6 +17,7 @@
 		console.log("button clicked");
 		// add class or toggle to button and burgerCon
 		burgerCon.classList.toggle("slideToggle");
+        button.classList.toggle("expanded");
 	}
     
     function scrollStep() {
