@@ -6,7 +6,11 @@
         image = document.querySelector('#imgTwo'),
         overlayCon = document.querySelectorAll('.homeOverlayCon'),
         overlays = document.querySelectorAll('.homeOverlay'),
-        actImg = document.querySelector(".bui img");
+        actImg = document.querySelector(".bui img"),
+        play = document.querySelector(".videoBut");
+    
+    const lightbox = document.querySelector(".lightbox"),
+          closeLB = document.querySelector(".lightbox-close");
     
     var counter = 1;
     
@@ -44,6 +48,15 @@
         });
     }
     
+    function showlightbox() {
+        console.log("show it");
+        lightbox.classList.add("show-lightbox");
+    }
+    
+    function hidelightbox() {
+        lightbox.classList.remove("show-lightbox");
+    }
+    
     next.addEventListener("click", function(e) {
         counter += 1;
         swapImg();
@@ -64,8 +77,8 @@
         });
     });
     
-    
-    
+    play.addEventListener("click", showlightbox);
+    closeLB.addEventListener("click", hidelightbox);
     
     //overlayCon.addEventListener("mouseover", function(e) {
         //overlayHome();
