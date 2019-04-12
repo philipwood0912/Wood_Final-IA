@@ -80,7 +80,7 @@ h2, h3, h4 {
     color: #fff;
 }
 
-#logo, #desktopNav, #desktopNavFoot, #stats, .heroBut, #histImg, .conInfo, .relatedInfo, #fundPhoto, .contactTwo, #thirdAbout, #imgTwo {
+#logo, #desktopNav, #desktopNavFoot, #stats, .heroBut, #histImg, .conInfo, .relatedInfo, #fundPhoto, .contactTwo, #thirdAbout, #imgTwo, .homeOverlay, .gearOverlay, .proOverlay {
     display: none;
 }
 
@@ -341,10 +341,11 @@ h2, h3, h4 {
 .activities {
     margin: 0 auto;
     text-align: center;
+    overflow: hidden;
 }
 
 .activities img {
-    padding: 10px 0px;
+    margin-top: 10px;
 }
 
 .titleAct {
@@ -398,7 +399,7 @@ h2, h3, h4 {
     #imgTwo {
         display: block;
         position: absolute;
-        max-width: 960px;
+        height: 400px;
         grid-column: 1/-1;
         grid-row: 1/-1;
         padding: 10px 0px;
@@ -473,6 +474,43 @@ h2, h3, h4 {
         font-size: 19px;
         padding: 5px 45px;
     }
+    .homeOverlay {
+        background: rgba(0,0,0,0.5);
+        position: absolute;
+        display: block;
+        grid-column: 1/-1;
+        max-width: 378px;
+        max-height: 200px;
+        left: 0;
+        right: 0;
+        padding: 20px 0px;
+        transition: all 1s ease;
+        opacity: 0;
+        margin-top: 10px;
+    }
+    .homeOverlayCon {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(10px, 1fr));
+        align-items: center;
+        justify-items: center;
+    }
+    .homeOverlayCon img {
+        grid-column: 1/-1;
+    }
+    .homeOverlayText {
+        color: #fff;
+        padding: 0px 30px;
+    }
+    .homeOverlayText p {
+        font-family: 'rubik-bold', Arial, serif;
+        line-height: 25px;
+        font-size: 14px;
+    }
+    .homeOverlayText h4 {
+        padding: 10px 0px;
+        line-height: 10px;
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -481,6 +519,12 @@ h2, h3, h4 {
     }
     .navi a {
         font-size: 16px;
+    }
+    .homeOverlayText p {
+        font-size: 16px;
+    }
+    .homeOverlayText h4 {
+        font-size: 18px;
     }
 }
 
@@ -661,6 +705,7 @@ h2, h3, h4 {
     margin: 0 auto;
     border-radius: 10px;
     padding-top: 20px;
+    overflow: hidden;
 }
 
 #gear {
@@ -674,7 +719,7 @@ h2, h3, h4 {
 #gear p {
     text-align: center;
     color: #fff;
-    padding: 10px 10px 5px 10px;
+    padding: 15px 10px 5px 10px;
     font-size: 18px;
 }
 
@@ -724,7 +769,6 @@ h2, h3, h4 {
 .pos h3, .pos p {
     color: #007f00;
     padding: 2px;
-    
 }
 
 #exe {
@@ -838,6 +882,36 @@ h2, h3, h4 {
     #chair, #pub {
         grid-column: 9/-1;
     }
+    .gearOverlay {
+        background: rgba(0,0,0,0.5);
+        position: absolute;
+        display: block;
+        grid-column: 1/-1;
+        max-height: 200px;
+        max-width: 160px;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        padding: 13px 0px 10px 0px;
+        transition: all 1s ease;
+        margin: 0 auto;
+        margin-top: 10px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    .gearImg {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(10px, 1fr));
+        align-items: center;
+        justify-items: center;
+    }
+    .gearImg img {
+        grid-column: 1/-1;
+    }
+    .gearOverlay h2 {
+        font-size: 23px;
+    }
 }
 
 @media screen and (min-width: 666px) {
@@ -861,6 +935,11 @@ h2, h3, h4 {
     .statBut {
         text-align: center;
     }
+    #statText {
+        color: #fff;
+        padding: 20px 70px 5px 70px;
+        text-align: center;
+    }
 }
 
 @media screen and (min-width: 800px) {
@@ -877,11 +956,17 @@ h2, h3, h4 {
         padding: 15px 20px;
         padding-bottom: 0;
     }
+    #statText {
+        padding: 20px 120px 5px 120px;
+    }
 }
 
 @media screen and (min-width: 900px) {
     #meetings p, #history p {
         padding: 10px 80px 0px 80px;
+    }
+    #statText {
+        padding: 20px 150px 5px 150px;
     }
 }
 
@@ -989,6 +1074,39 @@ h2, h3, h4 {
     }
     .currentTitle h3 {
         font-size: 20px;
+    }
+    .proOverlay {
+        background: rgba(0,0,0,0.5);
+        position: absolute;
+        display: block;
+        grid-column: 1/-1;
+        max-height: 400px;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        padding: 30px 20px;
+        transition: all 1s ease;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .proOverlayCon {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(10px, 1fr));
+        align-items: center;
+        justify-items: center;
+    }
+    .proOverlayCon img {
+        grid-column: 1/-1;
+    }
+    .proOverlay p {
+        color: #fff;
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .proOverlay h4 {
+        padding-top: 20px;
+        font-family: 'rubik-bolditalic', Arial, serif;
     }
 }
 
@@ -1126,7 +1244,6 @@ h2, h3, h4 {
         grid-template-columns: repeat(12, minmax(20px, 53px));
         grid-template-rows: repeat(2, minmax(20px, auto));
         grid-gap: 10px;
-        align-items: center;
     }
     #eventGridCon {
         display: flex;
