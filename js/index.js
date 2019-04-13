@@ -52,11 +52,15 @@
     function showlightbox() {
         console.log("show it");
         lightbox.classList.add("show-lightbox");
+        video.currentTime = 0;
+        video.volume = 0.1;
         video.play();
     }
     
     function hidelightbox() {
         lightbox.classList.remove("show-lightbox");
+        video.pause();
+        
     }
     
     next.addEventListener("click", function(e) {
