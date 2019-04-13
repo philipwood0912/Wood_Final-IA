@@ -84,6 +84,16 @@ h2, h3, h4 {
     display: none;
 }
 
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.bg {
+    background-color: #004200;
+}
+
 /*Button transform*/
 .back:active, .next:active, .homeBut:active, li a:active, .aboutBut:active, .newsBut:active, #contactSubmit:active {
     -webkit-transform: translate(0px, 3px);
@@ -92,12 +102,6 @@ h2, h3, h4 {
 }
 
 /*Image transform*/
-
-#histImg img:hover {
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    transform: scale(1.05);
-}
 
 @media screen and (min-width: 641px) {
     .gearImg:hover {
@@ -308,11 +312,8 @@ h2, h3, h4 {
 }
 
 .homeBut {
-    height: 50px;
     background-color: #fff;
-    border: 3px solid #007f00;
     text-align: center;
-    border-radius: 10px;
     margin: 0 auto;
     margin-top: 10px;
 }
@@ -320,7 +321,9 @@ h2, h3, h4 {
 .homeBut h3 {
     color: #007f00;
     line-height: 50px;
-    padding: 0px 5px;
+    padding: 5px 5px;
+    border: 3px solid #007f00;
+    border-radius: 15px;
 }
 
 .homeBut h3:hover {
@@ -361,13 +364,13 @@ h2, h3, h4 {
     height: 50px;
     margin: 0 auto;
     background-color: #fff;
-    border: 3px solid #007f00;
 }
 
 .titleAct h3 {
     color: #007f00;
     line-height: 50px;
-    font-size: 17px
+    font-size: 17px;
+    border: 2px solid #007f00;
 }
 
 .titleAct h3:hover {
@@ -378,10 +381,6 @@ h2, h3, h4 {
 /*Index Responsive*/
 
 @media screen and (min-width: 641px) {
-    #container {
-        max-width: 960px;
-        margin: 0 auto;
-    }
     #homeButCon {
         max-width: 960px;
         margin: 0 auto;
@@ -393,6 +392,7 @@ h2, h3, h4 {
     }
     #hero {
         position: relative;
+        margin: 0;
         padding: 10px 10px 0px 10px;
         background: none;
         max-width: 940px;
@@ -686,17 +686,16 @@ h2, h3, h4 {
 
 .aboutBut {
     width: 97%;
-    height: 50px;
-    background-color: #fff;
-    border: 3px solid #007f00;
     text-align: center;
-    border-radius: 10px;
     margin: 0 auto;
 }
 
 .aboutBut h3 {
     color: #007f00;
     line-height: 50px;
+    background-color: #fff;
+    border: 3px solid #007f00;
+    border-radius: 10px;
 }
 
 .aboutBut h3:hover {
@@ -1057,8 +1056,6 @@ h2, h3, h4 {
 .currentTitle {
     text-align: center;
     max-width: 378px;
-    background-color: #fff;
-    border: 3px solid #007f00;
     margin: 0 auto;
     margin-top: 10px;
 }
@@ -1066,6 +1063,8 @@ h2, h3, h4 {
 .currentTitle h3 {
     color: #007f00;
     padding: 20px 0px;
+    background-color: #fff;
+    border: 3px solid #007f00;
 }
 
 .currentTitle h3:hover {
@@ -1088,14 +1087,14 @@ h2, h3, h4 {
 .pastTitle {
     text-align: center;
     max-width: 374px;
-    background-color: #fff;
-    border: 3px solid #007f00;
     margin: 0 auto;
 }
 
 .pastTitle h3 {
     color: #007f00;
     padding: 20px 0px;
+    background-color: #fff;
+    border: 3px solid #007f00;
 }
 
 .pastTitle h3:hover {
@@ -1189,14 +1188,14 @@ h2, h3, h4 {
 
 .newsBut {
     text-align: center;
-    background-color: #fff;
-    border: 3px solid #007f00;
-    border-radius: 10px;
 }
 
 .newsBut h3 {
     color: #007f00;
     padding: 10px 0px;
+    background-color: #fff;
+    border: 3px solid #007f00;
+    border-radius: 10px;
 }
 
 .newsBut h3:hover {
@@ -1391,8 +1390,6 @@ h2, h3, h4 {
 }
 
 .conLink {
-    background-color: #fff;
-    border: 3px solid #007f00;
     margin-top: 5px;
 }
 
@@ -1400,6 +1397,8 @@ h2, h3, h4 {
     color: #007f00;
     font-size: 12px;
     padding: 10px 0px;
+    background-color: #fff;
+    border: 3px solid #007f00;
 }
 
 .conLink h3:hover {
@@ -1420,17 +1419,15 @@ h2, h3, h4 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
     grid-gap: 5px;
-}
-
-.authOne {
-    background-color: #fff;
-    border: 3px solid #007f00;
+    margin-top: 5px;
 }
 
 .authOne h3 {
     color: #007f00;
     font-size: 10px;
     padding: 10px 0px;
+    background-color: #fff;
+    border: 3px solid #007f00;
 }
 
 .authOne h3:hover {
@@ -1452,8 +1449,6 @@ h2, h3, h4 {
 }
 
 .gov {
-    background-color: #fff;
-    border: 3px solid #007f00;
     margin-top: 5px;
 }
 
@@ -1461,6 +1456,8 @@ h2, h3, h4 {
     color: #007f00;
     font-size: 10px;
     padding: 10px 0px;
+    background-color: #fff;
+    border: 3px solid #007f00;
 }
 
 .gov h3:hover {
@@ -1478,14 +1475,14 @@ h2, h3, h4 {
 }
 
 .supportLink {
-    background-color: #fff;
-    border: 3px solid #007f00;
     margin-top: 5px;
 }
 
 .supportLink h3 {
     color: #007f00;
     padding: 10px;
+    background-color: #fff;
+    border: 3px solid #007f00;
 }
 
 .supportInfo p {
@@ -1508,14 +1505,14 @@ h2, h3, h4 {
 }
 
 .relatedLink {
-    background-color: #fff;
-    border: 3px solid #007f00;
     margin-top: 5px;
 }
 
 .relatedLink h3 {
     color: #007f00;
     padding: 10px;
+    background-color: #fff;
+    border: 3px solid #007f00;
 }
 
 .relatedLink h3:hover {
