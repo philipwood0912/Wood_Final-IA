@@ -7,7 +7,8 @@
         overlayCon = document.querySelectorAll('.homeOverlayCon'),
         overlays = document.querySelectorAll('.homeOverlay'),
         actImg = document.querySelector(".bui img"),
-        play = document.querySelector(".videoBut");
+        play = document.querySelector(".videoBut"),
+        video = document.querySelector("video");
     
     const lightbox = document.querySelector(".lightbox"),
           closeLB = document.querySelector(".lightbox-close");
@@ -51,10 +52,15 @@
     function showlightbox() {
         console.log("show it");
         lightbox.classList.add("show-lightbox");
+        video.currentTime = 0;
+        video.volume = 0.1;
+        video.play();
     }
     
     function hidelightbox() {
         lightbox.classList.remove("show-lightbox");
+        video.pause();
+        
     }
     
     next.addEventListener("click", function(e) {
@@ -79,6 +85,7 @@
     
     play.addEventListener("click", showlightbox);
     closeLB.addEventListener("click", hidelightbox);
+    video.addEventListener("ended", hidelightbox);
     
     //overlayCon.addEventListener("mouseover", function(e) {
         //overlayHome();
