@@ -55,6 +55,16 @@ Recommened not to be opened in IE - code needed to make browser compatible
 
 Philip Wood
 
+### Copyright Info
+
+All photos and video used in the creation of this project are:
+
+<ul>
+    <li>Property of the TRAA</li>
+    or
+    <li>Labeled for Reuse</li>
+</ul>
+
 
 
 
