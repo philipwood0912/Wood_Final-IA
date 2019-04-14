@@ -1,0 +1,101 @@
+Dev Notes - TRAA FIA
+
+Philip Wood
+
+- JavaScript to add -
+
+1. Gallery
+2. About Buttons Text
+3. Statistics
+4. Switching Event Text
+5. Transitions
+
+- JavaScript Referenced -
+
+1. Hamburger Menu - Referenced from an example from Marco
+2. Back to Top - Referenced from Codepen; left a link in code to reference
+3. Lightbox - Referenced from GOT example
+
+- Gallery -
+
+1. Link up back / next / heroimage
+2. Add a variable counter
+3. Add function to swap image
+	i) Add if rules - if counter goes above a certain value; reset to minimum
+			- if counter goes below a certain value; reset to maximum
+	ii) Change heroimage src according to counter value
+4. Add event listerner "click" to back / next and run a function
+	i) Back: Counter -1, Next: Counter + 1
+	ii) Run swapImg function
+
+- About Button Text -
+
+1. Set up datasets and class names in HTML
+2. Link up about buttons / about text 
+3. Set up multidimensional array to hold about text
+4. Add event listener "click" for each of the buttons and run function
+	i) Change about text content according to this.dataset
+
+- Statistics -
+
+1. Link up statistics image / text / back / next
+2. Add a variable counter
+3. Add statistic text to multidimensional array
+4. Add function for animation
+	i) set up const offset value
+	ii) add if rules - if counter goes above a certain value; reset to minimum
+			 - if counter goes below a certain value; reset to maximum
+	iii) totaloffset = counter * offset
+	iv) style image according to totaloffset
+	(GOT reference helped here)
+	v) change statistic text content according to counter
+5. Add event listerner "click" to back / next and run a function
+	i) Back: Counter -1, Next: Counter + 1
+	ii) Run animation function
+
+- Switching Event Text - 
+
+1. Link up event image / all text locations / back / next
+2. Set up variable counter
+3. Add event text into multidimensional array
+4. Add function for event swap
+	i) add if rules - if counter goes above a certain value; reset to minimum
+			- if counter goes below a certain value; reset to maximum
+	ii) change event image src according to counter
+	iii) use multidimensional array to change all text content according to counter
+5. Add event listerner "click" to back / next and run a function
+	i) Back: Counter -1, Next: Counter + 1
+	ii) Run event swap function
+
+- Transitions -
+
+1. Set up datasets and class names in html
+2. Link up overlay container / overlay
+3. Set up two functions passing nameSrc through scope
+	a) Function 1 - i) Target each overlay
+			ii) add if rule - if nameSrc = dataset
+				iii) style overlay opacity = 1
+	b) Function 2 - i) Target each overlay 
+			ii) add if rule - if nameSrc = dataset
+				iii) style overlay opacity = 0
+4. Add event listener "mouseover" for each of the overlay containers and run function
+	i) let nameSrc = the overlay containers classname using split
+	ii) run function 1 with nameSrc in scope
+	iii) add event listener "mouseleave" and run function
+		a) run function 2 with nameSrc in scope
+
+* Transitions Index page specific
+Had trouble with it scaling, figured out a work around
+
+1. Link up index image
+2. Add some variables
+	i) imgheight = index image current height
+	ii) imgpercent = imgheight / max height * 100
+	iii) paddingpercent = padding / max height * 100
+3. In function 1
+	i) style overlay height = imgpercent - paddingpercent + %
+
+this made the overlays scalable on index page, where imgs shrink in size
+
+
+
