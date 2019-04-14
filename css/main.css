@@ -80,7 +80,7 @@ h2, h3, h4 {
     color: #fff;
 }
 
-#logo, #desktopNav, #desktopNavFoot, #stats, .heroBut, #histImg, .conInfo, .relatedInfo, #fundPhoto, .contactTwo, #thirdAbout, #imgTwo, .homeOverlay, .gearOverlay, .proOverlay, .videoBut, .lightbox {
+#logo, #desktopNav, #desktopNavFoot, #stats, .heroBut, #histImg, .conInfo, .relatedInfo, #fundPhoto, .contactTwo, #thirdAbout, #imgTwo, .homeOverlay, .proOverlay, .videoBut, .lightbox, .gearOverlay {
     display: none;
 }
 
@@ -115,7 +115,7 @@ h2, h3, h4 {
 
 #mainHeader {
     background-color: #004200;
-    padding: 10px;
+    padding: 15px;
 }
 
 #menuBut {
@@ -246,7 +246,7 @@ h2, h3, h4 {
     height: 150px;
     text-align: center;
     margin: 0 auto;
-    margin-top: 10px;
+    padding: 10px 10px 5px 10px;
 }
 
 #mobileLogo img {
@@ -259,7 +259,7 @@ h2, h3, h4 {
     margin: 0 auto;
     margin-top: 10px;
     text-align: center;
-    background-image: url(../images/mobile-hero.jpg);
+    background: url(../images/mobile-hero.jpg) center no-repeat;
     padding: 20px 10px;
 }
 
@@ -380,6 +380,18 @@ h2, h3, h4 {
 
 /*Index Responsive*/
 
+@media screen and (min-width: 500px) {
+    #hero {
+        background: url(../images/tablet_hero.jpg) center no-repeat;
+    }
+}
+
+@media screen and (min-width: 530px) {
+    #hero {
+        padding: 20px 70px;
+    }
+}
+
 @media screen and (min-width: 641px) {
     #homeButCon {
         max-width: 960px;
@@ -390,61 +402,6 @@ h2, h3, h4 {
     .homeBut h3 {
         padding: 0px 10px;
     }
-    #hero {
-        position: relative;
-        margin: 0;
-        padding: 10px 10px 0px 10px;
-        background: none;
-        max-width: 940px;
-        height: 400px;
-        display: grid;
-        grid-template-columns: repeat(8, minmax(50px, 1fr));
-        grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
-        grid-gap: 10px;
-        align-items: center;
-        justify-items: center;
-    }
-    #imgTwo {
-        display: block;
-        position: absolute;
-        height: 400px;
-        grid-column: 1/-1;
-        grid-row: 1/-1;
-        padding: 10px 0px;
-    }
-    #hero h2 {
-        position: absolute;
-        grid-column: 2/8;
-        grid-row: 1/3;
-        font-size: 35px;
-        line-height: 35px;
-    }
-    #hero h3 {
-        position: absolute;
-        grid-column: 2/8;
-        grid-row: 3/4;
-        font-size: 25px;
-    }
-    #hero p {
-        position: absolute;
-        margin: 0;
-        grid-column: 2/8;
-        grid-row: 5/-1;
-        font-size: 20px;
-        line-height: 25px;
-        margin-top: 30px;
-    }
-    .heroBut {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-    }
-    .heroBack {
-        grid-column: 1/2;
-    }
-    .heroNext {
-        grid-column: 8/-1;
-    }
     #recent {
         margin: 0;
         margin-top: 15px;
@@ -454,6 +411,7 @@ h2, h3, h4 {
     }
     #recentCon {
         display: flex;
+        padding-bottom: 5px;
     }
     .titleAct h3 {
         line-height: 20px;
@@ -465,16 +423,21 @@ h2, h3, h4 {
     }
 }
 
+@media screen and (min-width: 648px) {
+    #hero h2 {
+        padding: 0px 80px;
+    }
+}
+
 @media screen and (min-width: 800px) {
     h2 {
         font-size: 35px;
     }
     #hero h2 {
-        font-size: 45px;
-        line-height: 45px;
+        margin-top: 10px;
     }
     #hero h3 {
-        font-size: 30px;
+        font-size: 23px;
     }
     #hero p {
         font-size: 22px;
@@ -562,6 +525,61 @@ h2, h3, h4 {
         cursor: pointer;
         font-size: 2em;
     }
+    #hero {
+        position: relative;
+        margin: 0;
+        padding: 10px 10px 0px 10px;
+        background: none;
+        max-width: 960px;
+        height: 400px;
+        display: grid;
+        grid-template-columns: repeat(8, minmax(50px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+        grid-gap: 10px;
+        align-items: center;
+        justify-items: center;
+    }
+    #imgTwo {
+        display: block;
+        position: absolute;
+        height: 400px;
+        grid-column: 1/-1;
+        grid-row: 1/-1;
+        padding: 10px 0px;
+    }
+    #hero h2 {
+        position: absolute;
+        grid-column: 2/8;
+        grid-row: 1/3;
+        font-size: 37px;
+        line-height: 35px;
+    }
+    #hero h3 {
+        position: absolute;
+        grid-column: 2/8;
+        grid-row: 4/6;
+        font-size: 25px;
+    }
+    #hero p {
+        position: absolute;
+        margin: 0;
+        grid-column: 2/8;
+        grid-row: 5/-1;
+        font-size: 20px;
+        line-height: 25px;
+        margin-top: 30px;
+    }
+    .heroBut {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+    }
+    .heroBack {
+        grid-column: 1/2;
+    }
+    .heroNext {
+        grid-column: 8/-1;
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -584,7 +602,7 @@ h2, h3, h4 {
 #mainFoot {
     height: 50px;
     background-color: #004200;
-    padding: 10px;
+    padding: 15px 10px;
     margin-top: 10px;
 }
 
@@ -667,13 +685,14 @@ h2, h3, h4 {
 
 #aboutUs h4 {
     color: #fff;
-    padding: 0px 5px;
-    line-height: 20px;
+    padding: 5px 5px;
+    line-height: 22px;
 }
 
 #aboutUs p {
     color: #fff;
     padding: 30px 20px 10px 20px;
+    line-height: 22px;
 }
 
 #aboutCon {
@@ -719,14 +738,11 @@ h2, h3, h4 {
     margin-top: 10px;
 }
 
-#history .line, #meetings .line {
-    margin-bottom: 5px;
-}
-
 #history p {
     color: #fff;
     padding-top: 10px;
     text-indent: 1em;
+    line-height: 20px;
 }
 
 #meetings {
@@ -741,6 +757,7 @@ h2, h3, h4 {
     color: #fff;
     text-indent: 1em;
     padding-top: 10px;
+    line-height: 20px;
 }
 
 #meetings img {
@@ -756,6 +773,7 @@ h2, h3, h4 {
     border-radius: 10px;
     padding-top: 20px;
     overflow: hidden;
+    margin-top: 15px;
 }
 
 #gear {
@@ -764,18 +782,32 @@ h2, h3, h4 {
     max-width: 960px;
     margin: 0 auto;
     margin-top: 10px;
+    position: relative;
 }
 
 #gear p {
     text-align: center;
     color: #fff;
-    padding: 15px 10px 5px 10px;
+    padding: 20px 10px 5px 10px;
     font-size: 18px;
+    line-height: 20px;
 }
 
 .gearImg {
     margin: 0 auto;
     padding-bottom: 20px;
+}
+
+.mobileOverlay {
+    position: absolute;
+    height: 50px;
+    padding: 5px 15px;
+    background: rgba(0,0,0,0.7);
+    font-size: 30px;
+    text-align: center;
+    line-height: 52px;
+    border-radius: 10px;
+    margin-left: 10px;
 }
 
 #stats {
@@ -804,6 +836,7 @@ h2, h3, h4 {
     text-align: center;
     background-color: #fff;
     border-radius: 10px;
+    margin-top: 15px;
 }
 
 #businessCon a {
@@ -832,6 +865,7 @@ h2, h3, h4 {
 #exeCon {
     margin: 0 auto;
     text-align: center;
+    margin-top: 15px;
 }
 
 #vol {
@@ -845,6 +879,7 @@ h2, h3, h4 {
 #volCon {
     margin: 0 auto;
     text-align: center;
+    margin-top: 15px;
 }
 
 /*About Page Responsive*/
@@ -870,6 +905,9 @@ h2, h3, h4 {
 }
 
 @media screen and (min-width: 641px) {
+    .mobileOverlay {
+        display: none;
+    }
     #aboutCon {
         grid-template-rows: 50px 50px;
     }
@@ -893,13 +931,19 @@ h2, h3, h4 {
     #histImg img {
         border-radius: 10px;
     }
+    #meetings img {
+        padding: 0;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
     #gearCon {
         display: flex;
         justify-content: center;
         margin: 0;
-        padding: 20px 0px;
+        padding: 20px 10px;
         max-width: 960px;
         max-height: 500px;
+        margin-top: 15px;
     }
     .gearImg {
         padding-bottom: 0;
@@ -972,6 +1016,7 @@ h2, h3, h4 {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        margin-top: 15px;
     }
     #statImgCon {
         width: 500px;
@@ -1039,10 +1084,14 @@ h2, h3, h4 {
     text-align: center;
 }
 
+#projects h4 {
+    padding: 10px;
+}
+
 #projects p {
     color: #fff;
     padding: 10px 0px;
-    line-height: 18px;
+    line-height: 20px;
 }
 
 #current {
@@ -1114,15 +1163,22 @@ h2, h3, h4 {
     }
     #pastCon {
         display: flex;
+        margin-top: 15px;
     }
     .pastTitle {
         flex: 1 0 300px;
+    }
+    #projects h4 {
+        font-size: 18px;
     }
 }
 
 @media screen and (min-width: 800px) {
     #projects p {
         padding: 10px 50px;
+    }
+    #projects h4 {
+        font-size: 20px;
     }
     .currentTitle h3 {
         font-size: 20px;
@@ -1136,7 +1192,7 @@ h2, h3, h4 {
         left: 0;
         right: 0;
         opacity: 0;
-        padding: 30px 20px;
+        padding: 50px 20px;
         transition: all 1s ease;
         margin: 0 auto;
         text-align: center;
@@ -1176,6 +1232,7 @@ h2, h3, h4 {
 #news p {
     color: #fff;
     padding: 5px;
+    line-height: 20px;
 }
 
 #newsCon {
@@ -1213,6 +1270,14 @@ h2, h3, h4 {
     text-align: center;
 }
 
+#eventSub {
+    padding-top: 5px;
+}
+
+#eventItalic {
+    padding-top: 5px;
+}
+
 .eventCon {
     margin-top: 15px;
 }
@@ -1222,6 +1287,7 @@ h2, h3, h4 {
     text-align: left;
     padding: 5px 10px 0px 10px;
     text-indent: 1em;
+    line-height: 22px;
 }
 
 .eventTitle {
@@ -1311,7 +1377,6 @@ h2, h3, h4 {
     }
     .eventImg {
         margin: 0;
-        padding; 0;
         grid-column: 8/-1;
         grid-row: 1/-1;
     }
@@ -1532,7 +1597,11 @@ h2, h3, h4 {
 #please p {
     color: #fff;
     font-size: 13px;
-    line-height: 18px;
+    line-height: 20px;
+}
+
+#please a {
+    color: #fff;
 }
 
 /*Links Page Responsive*/
@@ -1711,13 +1780,15 @@ h2, h3, h4 {
 
 #contact p {
     color: #fff;
-    line-height: 20px;
+    line-height: 22px;
+    padding: 5px 0px;
 }
 
 #contact h5 {
     color: #fff;
     font-size: 18px;
-    padding-top: 10px;
+    padding: 10px;
+    line-height: 20px;
 }
 
 #contactCon {
@@ -1784,6 +1855,10 @@ h2, h3, h4 {
     height: 35px;
 }
 
+input[placeholder] {
+    text-align: center;
+}
+
 #mailText {
     line-height: 20px;
 }
@@ -1809,10 +1884,10 @@ h2, h3, h4 {
 
 #fundraise p {
     color: #fff;
-    font-size 14px;
     text-align: left;
     text-indent: 1em;
     padding: 10px 15px 0px 15px;
+    line-height: 22px;
 }
 
 #fundraise h3 {
@@ -1881,7 +1956,7 @@ h2, h3, h4 {
         font-size: 25px;
     }
     #contact p {
-        padding: 0px 20px;
+        padding: 5px 20px;
     }
 }
 
@@ -1896,7 +1971,7 @@ h2, h3, h4 {
         grid-column: 1/8;
     }
     #fundText p {
-        padding-top: 18px;
+        padding-top: 13px;
     }
     #fundPhoto {
         display: block;
@@ -1907,7 +1982,7 @@ h2, h3, h4 {
         border-radius: 10px;
     }
     #contact p {
-        padding: 0px 50px;
+        padding: 10px 50px;
     }
     #contact h5 {
         font-size: 25px;
