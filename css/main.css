@@ -415,7 +415,7 @@ h2, h3, h4 {
     }
     .titleAct h3 {
         line-height: 20px;
-        padding: 5px 25px;
+        padding: 5px 30px;
     }
     .activities {
         margin: 0;
@@ -456,7 +456,7 @@ h2, h3, h4 {
         max-height: 200px;
         left: 0;
         right: 0;
-        padding: 20px 0px;
+        padding: 15px 0px;
         transition: all 1s ease;
         opacity: 0;
         margin-top: 10px;
